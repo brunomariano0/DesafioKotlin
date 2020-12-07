@@ -11,7 +11,7 @@ fun main() {
     executar.registrarProfessorAdjunto("Fernando","Ferreira",12,12)
     executar.registrarProfessorAdjunto("Lucas","Ferreira",22,65)
 
-    println("Registro feito com sucesso")
+    println("Registro dos professores foi efetuado com sucesso")
 
 
     // Registro dos Cursos
@@ -19,7 +19,7 @@ fun main() {
     executar.registrarCurso("Full Stack",20001,3)
     executar.registrarCurso("Android",20002,2)
 
-    println("Registro do curso foi efetuado com sucesso")
+    println("Registro dos curso Android e Full Stack foi efetuado com sucesso")
 
 
     //Alocar Professor Titular e Adjunto em cada curso
