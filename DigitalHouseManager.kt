@@ -29,7 +29,6 @@ class DigitalHouseManager() {
         )
     }
 
-
     // FUNÇÃO QUE VAI REGISTRAR O PROFESSOR TITULAR
 
     fun registrarProfessorTitular(nome: String, sobrenome: String, codigoProfessor: Int, especialidade: String) {
@@ -37,14 +36,12 @@ class DigitalHouseManager() {
         )
     }
 
-
     // FUNÇÃO QUE VAI EXCLUIR O PROFESSOR
 
     fun excluirProfessor(codigoProfessor: Int) {
         listaDoProfessoresTitular.remove(codigoProfessor)
         listaDoProfessoresAdjunto.remove(codigoProfessor)
     }
-
 
    // FUNÇÃO QUE VAI MATRICULAR O ALUNO
 
@@ -71,8 +68,16 @@ class DigitalHouseManager() {
     fun alocarProfessores(codigoCurso: Int, codigoProfessorTitular: Int, codigoProfessorAdjunto: Int) {
         val professorTitular = listaDoProfessoresTitular[codigoProfessorTitular]
         val professorAdjunto = listaDoProfessoresAdjunto[codigoProfessorAdjunto]
-        listaDoCurso[codigoCurso]?.professorTitular = professorTitular
-        listaDoCurso[codigoCurso]?.professorAdjunto = professorAdjunto
+        when {
+            professorTitular != null -> {
+                listaDoCurso[codigoCurso]?.professorTitular = professorTitular
+            }
+        }
+        when {
+            professorAdjunto != null -> {
+                listaDoCurso[codigoCurso]?.professorAdjunto = professorAdjunto
+            }
+        }
 
 
     }
