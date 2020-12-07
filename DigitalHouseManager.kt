@@ -3,10 +3,10 @@ package br.com.digitalhouse.desafio.bruno
 class DigitalHouseManager() {
 
 
-    var listaDoAlunos = mutableMapOf<Any?, Aluno>()
-    var listaDoProfessoresTitular = mutableMapOf<Any?, ProfessorTitular>()
-    var listaDoProfessoresAdjunto = mutableMapOf<Any?, ProfessorAdjunto>()
-    var listaDoCurso = mutableMapOf<Any?, Curso>()
+    val listaDoAlunos = mutableMapOf<Any?, Aluno>()
+    val listaDoProfessoresTitular = mutableMapOf<Any?, ProfessorTitular>()
+    val listaDoProfessoresAdjunto = mutableMapOf<Any?, ProfessorAdjunto>()
+    val listaDoCurso = mutableMapOf<Any?, Curso>()
     val listaDeMatricula = mutableMapOf<Any?, Matricula>()
 
 // FUNÇÃO QUE REGISTRA O CURSO
