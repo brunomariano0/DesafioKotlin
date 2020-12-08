@@ -13,6 +13,7 @@ class DigitalHouseManager() {
     fun registrarCurso(nome: String, codigoCurso: Int, quantidadeMaximaDeAlunos: Int) {
         listaDoCurso.put(codigoCurso, Curso(nome = nome, codigoDoCurso = codigoCurso,quantidadeMaximaDeAlunos = quantidadeMaximaDeAlunos)
         )
+    println("O curso ${nome} com o codigo ${codigoCurso} e quantidade maxima de alunos ${quantidadeMaximaDeAlunos} realizado com sucesso")
     }
 
 // FUNÇÃO EXCLUIR O CURSO
@@ -27,6 +28,7 @@ class DigitalHouseManager() {
     fun registrarProfessorAdjunto(nome: String, sobrenome: String, codigoProfessor: Int, quantidadeDeHoras: Int) {
         listaDoProfessoresAdjunto.put(codigoProfessor,ProfessorAdjunto(nome = nome, sobrenome = sobrenome,codigoDoProfessor = codigoProfessor,quantidadeDeHorasDeMonitoria = quantidadeDeHoras)
         )
+        println("O professor adjunto com o nome ${nome} ${sobrenome} com codigo ${codigoProfessor} e quantidade de horas monitoria de ${quantidadeDeHoras}  foi registrado com sucesso   ")
     }
 
     // FUNÇÃO QUE VAI REGISTRAR O PROFESSOR TITULAR
@@ -34,6 +36,8 @@ class DigitalHouseManager() {
     fun registrarProfessorTitular(nome: String, sobrenome: String, codigoProfessor: Int, especialidade: String) {
         listaDoProfessoresTitular.put(codigoProfessor,ProfessorTitular(nome = nome,sobrenome = sobrenome,codigoDoProfessor = codigoProfessor,especialidade = especialidade)
         )
+        println("O professor titular com o nome ${nome} ${sobrenome} com codigo ${codigoProfessor}  e especialista em ${especialidade} foi registrado com sucesso")
+
     }
 
     // FUNÇÃO QUE VAI EXCLUIR O PROFESSOR
@@ -48,6 +52,7 @@ class DigitalHouseManager() {
     fun matricularAluno(nome: String, sobrenome: String, codigoAluno: Int) {
         listaDoAlunos.put(codigoAluno,Aluno(nome = nome, sobrenome = sobrenome, codigoDoAluno = codigoAluno)
         )
+        println("Matricula realizada com sucesso do aluno ${nome} ${sobrenome} codigo do aluno é ${codigoAluno}")
     }
 
 
@@ -73,13 +78,16 @@ class DigitalHouseManager() {
                 listaDoCurso[codigoCurso]?.professorTitular = professorTitular
             }
         }
+        println("O professor titular com o codigo do curso ${codigoCurso} codigo do professor ${codigoProfessorTitular} foi alocado com sucesso ")
         when {
             professorAdjunto != null -> {
                 listaDoCurso[codigoCurso]?.professorAdjunto = professorAdjunto
             }
         }
+        println("O professor Adjunto com o codigo do curso ${codigoCurso} codigo do professor ${codigoProfessorAdjunto} foi alocado com sucesso")
 
 
     }
+
 
 }
