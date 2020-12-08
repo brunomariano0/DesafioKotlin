@@ -20,6 +20,7 @@ class DigitalHouseManager() {
 
     fun excluirCurso(codigoCurso: Int) {
         listaDoCurso.remove(codigoCurso)
+        println("O curso ${codigoCurso} foi removido")
     }
 
 
